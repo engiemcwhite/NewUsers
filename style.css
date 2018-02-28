@@ -1,0 +1,26 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+th{
+    width: 150px;
+}
+
+td{
+    text-align: center;
+}
+
+span{
+    display: block;
+    margin: 5px;
+}
+
+h1{
+}
+
+form{
+    border-top: 2px solid black;
+    display: inline-block;
+    text-align: right;
+}

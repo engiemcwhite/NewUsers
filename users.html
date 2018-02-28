@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
+    <script>
+        function newUser(){
+            var first = $("#firstName").val();
+            var last = $("#lastName").val();
+            var mail = $("#email").val();
+            var num = $("#phone").val();
+            $('tbody').append('<tr><td>'+first+'</td><td>'+last+'</td><td>'+mail+'</td><td>'+num+'</td><tr>')
+        }
+        
+        $(document).ready(function(){
+            $("form").submit(function(){
+                newUser();
+                this.reset();
+                return false
+
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email Address</th>
+                <th>Contact #</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <h1>Add User</h1>
+    <form action="process.php" method="post">
+        <span>First Name:<input type="text" name="firstName" id="firstName"></span>
+        <span>Last Name:<input type="text" name="lastName" id="lastName"></span>
+        <span>Email Address:<input type="text" name="email" id="email"></span>
+        <span>Contact #:<input type="text" name="phone" id="phone"></span>
+        <input type="submit" id="addUser" value="Add User">
+    </form>
+</body>
+</html>
